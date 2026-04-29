@@ -10,6 +10,7 @@ public class RewardSystem
 
 public interface IRewardable
 {
+    public void GiveReward();
 }
 
 public class Coins : IRewardable
