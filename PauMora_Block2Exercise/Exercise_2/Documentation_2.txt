@@ -1,0 +1,3 @@
+Open close principle: Its broken because to add a new skill we had to modify the skill system class.
+
+For the refactor now skills are an interface and the Apply Skill only calls the calculate damaage on the clases that inherit the ISkill

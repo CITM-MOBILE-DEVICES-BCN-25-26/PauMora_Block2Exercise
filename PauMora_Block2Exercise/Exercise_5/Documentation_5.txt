@@ -1,0 +1,5 @@
+Open Close Principle: In the original code we had to edit RewardSystem every time we wanted to add a reward type thus breaking this principle.
+
+Dependencyt Inversion Principle: The original code breaks this principle as it uses concrete details (strings) instead of abstraction to differentiate the rewards.
+
+With the new refactor now we have the interface IRewardable that differentiates the rewards and through the Give Reward we call the Irewardable.GiveReward.

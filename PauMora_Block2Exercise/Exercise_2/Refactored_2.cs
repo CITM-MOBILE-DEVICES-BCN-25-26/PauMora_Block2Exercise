@@ -1,36 +1,34 @@
 ﻿public class SkillSystem
 {
-    public int ApplySkill(Skill skillType, int baseDamage)
+    public int ApplySkill(ISkill skillType, int baseDamage)
     {
         return skillType.CalculateDamage(baseDamage);
     }
+}
 
-    public interface Skill 
-    {
-        public int CalculateDamage(int baseDamage);
-    }
+public interface ISkill 
+{
+    public int CalculateDamage(int baseDamage);
+}
 
-    public class Fire : Skill
+public class Fire : ISkill
+{
+    public int CalculateDamage(int baseDamage)
     {
-        public int CalculateDamage(int baseDamage)
-        {
-            return baseDamage + 10;
-        }
+        return baseDamage + 10;
     }
-    public class Ice : Skill
+}
+public class Ice : ISkill
+{
+    public int CalculateDamage(int baseDamage)
     {
-        public int CalculateDamage(int baseDamage)
-        {
-            return baseDamage + 5;
-        }
+        return baseDamage + 5;
     }
-    public class Poison : Skill
+}
+public class Poison : ISkill
+{
+    public int CalculateDamage(int baseDamage)
     {
-        public int CalculateDamage(int baseDamage)
-        {
-            return baseDamage + 2;
-        }
+        return baseDamage + 2;
     }
-
-
 }

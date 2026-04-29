@@ -1,0 +1,3 @@
+Liskov Substitution principle: In the original code Game Entity has Move but not all game entities move (Wall) so it breaks as its inheriting something they dont need.
+
+For the solution i created an interface called IMovable so clases that want to use Move can inherit from it but nothing else. So in Movmement system we pass a IMovable and that calsl the .Move.

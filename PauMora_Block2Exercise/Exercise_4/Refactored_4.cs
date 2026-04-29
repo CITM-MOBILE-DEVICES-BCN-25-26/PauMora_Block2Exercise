@@ -25,9 +25,7 @@ public class InventoryButton : IClickable, IHoverable
     public void OnHover()
     {
         Console.WriteLine("Inventory button hover");
-    }
-
-   
+    }   
 }
 
 public class InventoryItemSlot : IHoverable, IDraggable

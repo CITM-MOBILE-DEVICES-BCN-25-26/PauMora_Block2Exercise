@@ -7,28 +7,38 @@ public class MatchSummary
     public int TimePlayedInSeconds;  
 }
 
-public class PerformanceReport
+public class PerformanceCalculator
 {
     public float GetPerformance()
     {
         return Score / (float)(TimePlayedInSeconds + 1);
-    }
+    } 
+}
 
+public class  Printer
+{
     public string BuildSummaryText()
     {
         return $"Score: {Score} | Kills: {EnemiesKilled} | Performance: {GetPerformance()}";
     }
-
 }
 
-public class Exporter
+public interface IExporter
 {
-    public void ExportToJson()
+    void Export(MatchSummary summary);
+}
+
+public class JSONExporter : IExporter
+{
+    public void Export(MatchSummary summary)
     {
         Console.WriteLine("Exporting match summary to JSON...");
     }
+}
 
-    public void ExportToXml()
+public class  XMLExporter : IExporter
+{
+    public void Export(MatchSummary summary)
     {
         Console.WriteLine("Exporting match summary to XML...");
     }

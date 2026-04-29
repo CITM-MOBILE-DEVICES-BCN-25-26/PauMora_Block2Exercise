@@ -1,0 +1,5 @@
+Liskov Substitution Príncipe: 
+
+Interface Segregation Principle: In the original code InventoryButton doesnt use OnDrag and InventorySlot OnClick, this breaks the ISP as we would prefer small interfaces rather than one big purpose interface.
+
+To fix all the problems, I sepparated the onclick,onhover and ondrag to different interfaces so each class can inherit what they use-
