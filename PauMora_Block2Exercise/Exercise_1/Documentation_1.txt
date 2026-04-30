@@ -1,4 +1,7 @@
-The original code broke the single responsibility principle as one class was doing too many things and also broke the open close principle as if we wanted to add exporters we would have had to modify the class, but with the new implementation no.
+Single Responsibility: Principle: The original code broke the single responsibility principle as one class was doing too many things
+
+Open close principle: The open close principle is broken as if we wanted to add exporters we would have had to modify the class.
+
 
 Now the exporter uses an interface so we can add as many types of exporters by just adding new clases, not modifying any existing one.
 Data now has its own separate class (MatchSummary) performance calculator calculates the report and the printer prints.
