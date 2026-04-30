@@ -1,3 +1,5 @@
 Liskov Substitution principle: In the original code Game Entity has Move but not all game entities move (Wall) so it breaks as its inheriting something they dont need.
 
+Interface Segregation Principle: In the original code Wall doesnt use Move, this breaks the ISP as we would prefer small interfaces rather than one big purpose interface (GameEntity with Move).
+
 For the solution i created an interface called IMovable so clases that want to use Move can inherit from it but nothing else. So in Movmement system we pass a IMovable and that calsl the .Move.
